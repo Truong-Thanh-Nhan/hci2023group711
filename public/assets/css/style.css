@@ -1621,7 +1621,7 @@ max-width: 80%;
   left: 0;
   bottom: -40px;
   right: 0;
-  height: 40px;
+  height: 90px;
   opacity: 0;
   transition: bottom ease-in-out 0.4s;
   background: rgba(148, 192, 69, 0.8);
