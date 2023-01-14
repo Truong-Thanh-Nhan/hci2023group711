@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Style Guide - HCI 2023 Group711</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* ------------------- */
+    /* TEMPLATE        -- */
+    /* ----------------- */
+    
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+    
+    body {
+      max-width: 10000px;
+        max-height: 10000px;
+        background-color: #333;
+        color: whitesmoke;
+        font-size: 16px;
+        font-family: "Lato";
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    p {
+        margin: 0 0 15px;
+        line-height: 24px;
+        color: gainsboro;
+    }
+    a {
+        color: dodgerblue;
+        text-decoration: none;
+        border-bottom: 1px dotted;
+    }
+    a:hover {
+        color: tomato;
+    }
+    
+    .container-guide {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    /* ------------------- */
+    /* PEN STYLES      -- */
+    /* ----------------- */
+    
+    /* MAKE IT CUTE ----- */
+    .tabs-guide {
+        position: relative;
+        display: flex;
+      height: 100%;
+        min-height: 400px;
+      max-height: 10000px;
+      max-lines: 10000px;
+        border-radius: 8px 8px 0 0;
+        overflow: hidden;
+    }
+    
+    .tabby-tab {
+        flex: 1;
+      height: 100%;
+    }
+    
+    .tabby-tab label {
+        max-width: 900;
+        display: block;
+        box-sizing: border-box;
+        /* tab content must clear this */
+        height: 40px;
+    
+        padding: 10px;
+        text-align: center;
+        background: #94c045;
+        cursor: pointer;
+        transition: background 0.5s ease;
+    }
+    
+    .tabby-tab label:hover {
+        background: #648920;
+    }
+    
+    .tabby-content {
+        max-width: 100%;
+      height: 100%;
+      padding: 10px;
+      margin: 0;
+        position: absolute;
+    
+        left: 0;
+        bottom: 0;
+        right: 0;
+        /* clear the tab labels */
+        top: 50px;
+    
+        border-radius: 0 0 8px 8px;
+        background: #333;
+    
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    
+        /* show/hide */
+        opacity: 0;
+        transform: scale(0.1);
+        transform-origin: top left;
+    }
+    
+    .tabby-content img {
+        float: left;
+        margin-right: 20px;
+        border-radius: 8px;
+    }
+    
+    /* MAKE IT WORK ----- */
+    
+    .tabby-tab [type="radio"] {
+        display: none;
+    }
+    [type="radio"]:checked ~ label {
+        background: #3c4133;
+        z-index: 2;
+    }
+    
+    [type="radio"]:checked ~ label ~ .tabby-content {
+        z-index: 1;
+    
+        /* show/hide */
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    /* BREAKPOINTS ----- */
+    @media screen and (max-width: 767px) {
+        .tabs {
+            min-height: 400px;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .tabs {
+            min-height: 580px;
+        }
+        .tabby-tab label {
+            height: 60px;
+        }
+        .tabby-content {
+            top: 60px;
+        }
+        .tabby-content img {
+            float: none;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+    
+    
+    
+    .circle {
+      width: 100px;
+      height: 100px;
+      line-height: 50px;
+      border-radius: 50%;
+      font-size: 8px;
+      color: #fff;
+      text-align: center;
+    }
+    .flex-container {
+      display: flex;
+      
+    }
+    
+    .flex-container > div {
+      max-width: 100%;
+      margin: 10px;
+      padding: 20px;
+      font-size: 10px;
+      text-align: center;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+        </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html">Group 11</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="groupdiary.html">Group Diary</a></li>
+          <li><a href="technical.html">Technical</a></li>
+          <li><a href="project.html" >Project</a></li>
+          <li><a href="" style="font-weight: 700; color: #94c045;">Style Guide</a></li>
+          <li><a href="result.html">Result</a></li>
+
+          <li><a class="getstarted" href="https://group711-timups.web.app/">Go to Project</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- main -->
+  <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+          <div class="container">
+            <div class="breadcrumb-hero">
+              <h2>Style Guide</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Style Guide</li>
+          </ol>
+        </div>
+      </section><!-- End Breadcrumbs -->
+
+      <div class="container-guide">
+	
+        <h1>CHECK OUR STYLE GUIDE</h1>
+      
+        <div class="tabs-guide">
+
+          <div class="tabby-tab">
+            <input type="radio" id="tab-2" name="tabby-tabs" checked>
+            <label for="tab-2">Typography</label>
+            <div class="tabby-content">
+              <div class="row">
+                <div class="column" style="width: 100%;">
+              <h3>Group web</h3>
+                  
+              
+                <h4>1.1 Font:</h4>
+                <div  style="margin-left: 15px; margin-bottom: 15px;">
+                  <span>- For Heading: Montserraty</span><br>
+                  <span>- For Base: Open Sans</span><br>
+                  <span>- For Menu: Open Sans</span>
+                </div>
+                
+                <h4>1.2 Heading:</h4>
+                <div style="margin-left: 15px;">
+                  <div style="margin-bottom: 15px;">
+                    <h1 style="font-size: 28px;">- Heading 1</h1>
+                    <span>Font size: 28px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h2 style="font-size: 18px;">- Heading 2</h2>
+                    <span style=" margin-bottom: 25px;">Font size: 18px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h3 style="font-size: 26px;">- Heading 3</h3>
+                    <span style=" margin-bottom: 25px;">Font size: 26px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h4 style="font-size: 14px;">- Heading 4</h4>
+                    <span style=" margin-bottom: 25px;">Font size: 14px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h5 style="font-size: 20px;">- Heading 5</h5>
+                    <span style=" margin-bottom: 25px;">Font size: 20px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h6 style="font-size: 16px;">- Heading 6</h6>
+                    <span style=" margin-bottom: 25px;">Font size: 16px</span>
+                  </div>                  
+                </div>
+                
+                <h4>1.3 Text:</h4>
+                <div  style="margin-left: 15px; margin-bottom: 20px;">
+                  <span>Font size: 16px</span><br>
+                  <span style="position: relative; top: 5px;">This is a paragrap. This is a paragrap. This is a paragrap.</span><br>
+                  <span>This is a paragrap. This is a paragrap. This is a paragrap.</span>
+                </div>
+              </div>
+              <div class="column" style="width: 100%;">
+                <h3>Group web</h3>
+                  
+              
+                <h4>1.1 Font:</h4>
+                <div  style="margin-left: 15px; margin-bottom: 15px;">
+                  <span>- For Heading: Montserraty</span><br>
+                  <span>- For Base: Open Sans</span><br>
+                  <span>- For Menu: Open Sans</span>
+                </div>
+                
+                <h4>1.2 Heading:</h4>
+                <div style="margin-left: 15px;">
+                  <div style="margin-bottom: 15px;">
+                    <h1 style="font-size: 28px;">- Heading 1</h1>
+                    <span>Font size: 28px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h2 style="font-size: 18px;">- Heading 2</h2>
+                    <span style=" margin-bottom: 25px;">Font size: 18px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h3 style="font-size: 26px;">- Heading 3</h3>
+                    <span style=" margin-bottom: 25px;">Font size: 26px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h4 style="font-size: 14px;">- Heading 4</h4>
+                    <span style=" margin-bottom: 25px;">Font size: 14px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h5 style="font-size: 20px;">- Heading 5</h5>
+                    <span style=" margin-bottom: 25px;">Font size: 20px</span>
+                  </div>
+                  <div style="margin-bottom: 15px;">
+                    <h6 style="font-size: 16px;">- Heading 6</h6>
+                    <span style=" margin-bottom: 25px;">Font size: 16px</span>
+                  </div>                  
+                </div>
+                
+                <h4>1.3 Text:</h4>
+                <div  style="margin-left: 15px; margin-bottom: 20px;">
+                  <span>Font size: 16px</span><br>
+                  <span style="position: relative; top: 5px;">This is a paragrap. This is a paragrap. This is a paragrap.</span><br>
+                  <span>This is a paragrap. This is a paragrap. This is a paragrap.</span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+      
+          <div class="tabby-tab">
+            <input type="radio" id="tab-3" name="tabby-tabs">
+            <label for="tab-3">Color palette</label>
+            <div class="tabby-content">
+                  <h2>Group web</h2>  
+                        <div class="flex-container">
+                <div class="circle" style="background: #000">#000</div>
+              <div class="circle" style="background: #94c045">#94c045</div>
+                        <div class="circle" style="background: #fff; color: #000" >#fff</div>
+                        <div class="circle" style="background:  #648920"> #648920</div>
+                        <div class="circle" style="background:#565e49"> #565e49</div>
+                        <div class="circle" style="background:#3c4133"> #3c4133</div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="tabby-tab">
+            <input type="radio" id="tab-4" name="tabby-tabs">
+            <label for="tab-4">Image and icon</label>
+            <div class="tabby-content">
+              
+            </div>
+          </div>
+    
+          <div class="tabby-tab" style="width: 200px;">
+            <input type="radio" id="tab-5" name="tabby-tabs">
+            <label for="tab-5">File and directory</label>
+            <div class="tabby-content">
+              
+            </div>
+          </div>
+          
+          <div class="tabby-tab" style="height: 1000px;">
+            
+            <input type="radio" id="tab-1" name="tabby-tabs" >
+            <label for="tab-1">Layout</label>
+            <div class="tabby-content">
+              <h2>Group Web</h2>
+    
+                <div class="row">
+                  <div class="column">
+                    <h3>Home</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <h3>About</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <h3>Group Diary</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                </div>
+                  <div class="row">
+                  <div class="column">
+                    <h3>Technical</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <h3>Style Guide</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <h3>Result</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="column">
+                    <h3>Contact</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                </div>
+                
+                <h2>Project Web</h2>
+    
+                <div class="row">
+                  <div class="column">
+                    <h3>Home</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <h3>About</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <h3>Result</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                </div>
+                  <div class="row">
+                  <div class="column">
+                    <h3>Home</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <h3>About</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <h3>Result</h3>
+                    <img src="" alt="" style="width:100%">
+                  </div>
+                </div>
+                        </div>
+                      </div>
+
+        </div>
+      </div>  
+
+  </main>
+  <!-- end main -->
+
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Group 11</h3>
+            </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="groupdiary.html">Group Diary</a></li>
+              <li><a href="technical.html">Technical</a></li>
+              <li><a href="project.html">Project</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Nong Lam university <br>
+              HCI 2023<br>
+              Group 11<br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> group11@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="index.html" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="index.html" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="index.html" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="index.html" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
